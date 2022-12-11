@@ -23,7 +23,7 @@ function App() {
 	useEffect(() => {
 		getScore({ quizDispatch });
 		getLeaderboard({ quizDispatch });
-	}, [token]);
+	}, [token, quizDispatch]);
 	return (
 		<div className="dark font-sans bg-gray-900 text-white min-h-screen pb-7">
 			<Navbar />
