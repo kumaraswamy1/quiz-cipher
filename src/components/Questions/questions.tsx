@@ -45,8 +45,8 @@ export const Question = () => {
 		setClicked(true);
 		pause();
 	};
-	const submitHandler = () => {
-		postScore({ category, points, quizDispatch });
+	const submitHandler = async () => {
+		await postScore({ category, points, quizDispatch });
 	};
 	return (
 		<>

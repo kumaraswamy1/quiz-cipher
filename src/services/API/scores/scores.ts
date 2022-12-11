@@ -20,9 +20,10 @@ type getQuizDataProps = {
 export async function getScore({quizDispatch}:getQuizDataProps) {
 		const { data } = await axios.get<quizScore>(
 			"https://quiz-cipher.kumaraswamya.repl.co/quizScores",
-		);
+    );
+  
     if (data) {
-        console.log(data)
+        
         quizDispatch({ type: "SET_SCORE", payload: data.scores})
     }
 	
@@ -36,7 +37,7 @@ export async function postScore({category,points,quizDispatch}:quizDataProps) {
 
 		);
     if (data) {
-        console.log(data)
+       
          quizDispatch({ type: "CLEAR_SCORE"})
        
     }
